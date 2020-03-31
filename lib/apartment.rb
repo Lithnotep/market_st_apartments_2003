@@ -1,4 +1,5 @@
-require "pry"
+require 'pry'
+require './lib/renter.rb'
 
 class Apartment
   attr_reader :number, :monthly_rent, :bathrooms, :bedrooms, :renter
