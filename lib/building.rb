@@ -11,10 +11,12 @@ class Building
 
   def renters
     renter_names = []
+    if !@units = []
     @units.each do |unit|
       renter_names << unit.renter.name
+      end
     end
-    renter_names.compact
+    renter_names
   end
 
   def add_unit(unit)
