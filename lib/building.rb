@@ -18,9 +18,15 @@ class Building
     renter_names.compact
   end
 
+  def average_rent
+  renter_price = 0.0
+    @units.each do |unit|
+    renter_price += unit.monthly_rent
+    end
+    renter_price/(@units.count)
+  end
+
   def add_unit(unit)
     @units << unit
   end
-
-
 end
