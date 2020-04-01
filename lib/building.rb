@@ -10,13 +10,12 @@ class Building
   end
 
   def renters
-    renter_names = []
-    if !@units = []
-    @units.each do |unit|
-      renter_names << unit.renter.name
+    renter_names = @units.map do |unit|
+      if unit.renter != nil
+         unit.renter.name
       end
     end
-    renter_names
+    renter_names.compact
   end
 
   def add_unit(unit)
